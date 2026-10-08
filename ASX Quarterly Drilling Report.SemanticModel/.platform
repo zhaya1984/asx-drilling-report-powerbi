@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "ASX Quarterly Drilling Report"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "957de47a-ea09-401b-b29c-c5950510aa2b"
+  }
+}

@@ -1,0 +1,116 @@
+table Calendar
+	lineageTag: 168f4d86-4753-4c73-8924-9578a1e6abc5
+
+	column Quarter
+		dataType: string
+		lineageTag: e891612f-2852-42bf-82c6-cde935060620
+		summarizeBy: none
+		sourceColumn: Quarter
+		sortByColumn: 'Quarter Sort'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter Sort'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2cf6164a-be57-48e3-a6f4-3c856350124e
+		summarizeBy: none
+		sourceColumn: Quarter Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 81247744-0022-4dd5-90af-16f21bcd6810
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter Num'
+		dataType: int64
+		formatString: 0
+		lineageTag: f107f3ed-0268-4115-8e6b-9a55ca40bbde
+		summarizeBy: none
+		sourceColumn: Quarter Num
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter Flag'
+		dataType: string
+		lineageTag: 73652ddd-e040-465f-b08f-0c3b86dbca7d
+		summarizeBy: none
+		sourceColumn: Quarter Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter Flag Sort'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3aba61a7-0748-4048-85e7-fa9ff0e43658
+		summarizeBy: none
+		sourceColumn: Quarter Flag Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendar = m
+		mode: import
+		source =
+				let
+				    StartYear = 2020,
+				    StartQuarter = 1,
+				    Today = DateTime.FixedLocalNow(),
+				    CurrentYear = Date.Year(Today),
+				    CurrentQuarter = Date.QuarterOfYear(Today),
+				    StartIndex = StartYear * 4 + (StartQuarter - 1),
+				    EndIndex = CurrentYear * 4 + (CurrentQuarter - 1),
+				    QuarterIndexList = List.Generate(
+				        () => StartIndex,
+				        each _ <= EndIndex,
+				        each _ + 1
+				    ),
+				    RecordList = List.Transform(QuarterIndexList, each
+				        let
+				            Idx = _,
+				            Yr = Number.IntegerDivide(Idx, 4),
+				            Qtr = Number.Mod(Idx, 4) + 1,
+				            Diff = Idx - EndIndex,
+				            Flag =
+				                if Diff = 0 then "Current Quarter"
+				                else if Diff = -1 then "Previous Quarter"
+				                else if Diff > 0 then "Future Quarter"
+				                else "Earlier",
+				            FlagSort =
+				                if Diff = 0 then 3        // Current Quarter
+				                else if Diff = -1 then 2  // Previous Quarter
+				                else if Diff > 0 then 4   // Future Quarter
+				                else 1                    // Earlier
+				        in
+				            [
+				                Year = Yr,
+				                #"Quarter Num" = Qtr,
+				                Quarter = "Q" & Text.From(Qtr) & " " & Text.From(Yr),
+				                #"Quarter Sort" = Yr * 10 + Qtr,
+				                #"Quarter Flag" = Flag,
+				                #"Quarter Flag Sort" = FlagSort
+				            ]
+				    ),
+				    Result = Table.FromRecords(RecordList, {"Year", "Quarter Num", "Quarter", "Quarter Sort", "Quarter Flag", "Quarter Flag Sort"}),
+				    ChangedType = Table.TransformColumnTypes(Result, {
+				        {"Year", Int64.Type},
+				        {"Quarter Num", Int64.Type},
+				        {"Quarter", type text},
+				        {"Quarter Sort", Int64.Type},
+				        {"Quarter Flag", type text},
+				        {"Quarter Flag Sort", Int64.Type}
+				    })
+				in
+				    ChangedType
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

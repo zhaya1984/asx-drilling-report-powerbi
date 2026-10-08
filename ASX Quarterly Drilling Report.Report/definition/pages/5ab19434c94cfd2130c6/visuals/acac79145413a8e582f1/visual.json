@@ -1,0 +1,747 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "acac79145413a8e582f1",
+  "position": {
+    "x": 0,
+    "y": 237.90202405397477,
+    "z": 1000,
+    "height": 482.56262833675567,
+    "width": 1280.0750953358756,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PPDM Extraction"
+                    }
+                  },
+                  "Property": "WELL NAME"
+                }
+              },
+              "queryRef": "PPDM Extraction.WELL NAME",
+              "nativeQueryRef": "WELL NAME"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PPDM Extraction"
+                    }
+                  },
+                  "Property": "STATUS"
+                }
+              },
+              "queryRef": "PPDM Extraction.STATUS",
+              "nativeQueryRef": "ASX REPORT STATUS",
+              "displayName": "ASX REPORT STATUS"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PPDM Extraction"
+                    }
+                  },
+                  "Property": "Spud Date"
+                }
+              },
+              "queryRef": "PPDM Extraction.Spud Date",
+              "nativeQueryRef": "Spud Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Well Status Reference"
+                    }
+                  },
+                  "Property": "LONG NAME"
+                }
+              },
+              "queryRef": "Well Status Reference.LONG_NAME",
+              "nativeQueryRef": "LONG_NAME"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Well Status Reference"
+                    }
+                  },
+                  "Property": "ROW_CREATED_BY"
+                }
+              },
+              "queryRef": "Well Status Reference.ROW_CREATED_BY",
+              "nativeQueryRef": "ROW_CREATED_BY"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Well Status Reference"
+                    }
+                  },
+                  "Property": "ROW_CREATED_DATE"
+                }
+              },
+              "queryRef": "Well Status Reference.ROW_CREATED_DATE",
+              "nativeQueryRef": "ROW_CREATED_DATE"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Well Status Reference"
+                    }
+                  },
+                  "Property": "ROW_CHANGED_DATE"
+                }
+              },
+              "queryRef": "Well Status Reference.ROW_CHANGED_DATE",
+              "nativeQueryRef": "ROW_CHANGED_DATE"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Well Status Reference"
+                    }
+                  },
+                  "Property": "ROW_CHANGED_BY"
+                }
+              },
+              "queryRef": "Well Status Reference.ROW_CHANGED_BY",
+              "nativeQueryRef": "ROW_CHANGED_BY"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Well Status Reference"
+                    }
+                  },
+                  "Property": "REMARK"
+                }
+              },
+              "queryRef": "Well Status Reference.REMARK",
+              "nativeQueryRef": "REMARK"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Well Status Reference"
+                    }
+                  },
+                  "Property": "STATUS_TYPE"
+                }
+              },
+              "queryRef": "Well Status Reference.STATUS_TYPE",
+              "nativeQueryRef": "STATUS_TYPE"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Well Status Reference"
+                    }
+                  },
+                  "Property": "EFFECTIVE_DATE"
+                }
+              },
+              "queryRef": "Well Status Reference.EFFECTIVE_DATE",
+              "nativeQueryRef": "EFFECTIVE_DATE"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Well Status Reference"
+                    }
+                  },
+                  "Property": "ACTIVE_IND"
+                }
+              },
+              "queryRef": "Well Status Reference.ACTIVE_IND",
+              "nativeQueryRef": "ACTIVE_IND"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Well Status Reference"
+                    }
+                  },
+                  "Property": "EXPIRY_DATE"
+                }
+              },
+              "queryRef": "Well Status Reference.EXPIRY_DATE",
+              "nativeQueryRef": "EXPIRY_DATE"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "PPDM Extraction"
+                  }
+                },
+                "Property": "WELL NAME"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "100.07692307692308D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "PPDM Extraction.STATUS"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "87.58241758241758D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Well Status Reference.ROW_CREATED_BY"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "84.54945054945054D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Well Status Reference.ROW_CHANGED_BY"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "157.64835164835165D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Well Status Reference.LONG_NAME"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "70.42625214890393D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Well Status Reference.REMARK"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113.85219646533515D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Well Status Reference.ROW_CHANGED_DATE"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "109.93660208289202D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Well Status Reference.ROW_CREATED_DATE"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "70.46153846153845D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Well Status Reference.EXPIRY_DATE"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "96.86813186813187D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Well Status Reference.EFFECTIVE_DATE"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#118dff'"
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridHorizontalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            },
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "955c4f85e97261aa1688",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Well Status Reference"
+              }
+            },
+            "Property": "ACTIVE_IND"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8bccb82debbe0411404b",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "STATUS"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c71dbc8529f6904cbb12",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Well Status Reference"
+              }
+            },
+            "Property": "EFFECTIVE_DATE"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1546e5bb52c7a518b38c",
+        "ordinal": 3,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Well Status Reference"
+              }
+            },
+            "Property": "EXPIRY_DATE"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "76d99ba614ddb1a1d956",
+        "ordinal": 4,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Well Status Reference"
+              }
+            },
+            "Property": "LONG NAME"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "13c21a48326075e677f8",
+        "ordinal": 5,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Well Status Reference"
+              }
+            },
+            "Property": "REMARK"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "595bd8b4c415c8fe754d",
+        "ordinal": 6,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Well Status Reference"
+              }
+            },
+            "Property": "ROW_CHANGED_BY"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b9cdcc412e9fccfb340c",
+        "ordinal": 7,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Well Status Reference"
+              }
+            },
+            "Property": "ROW_CHANGED_DATE"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "cb4a540da7d1dcd2506f",
+        "ordinal": 8,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Well Status Reference"
+              }
+            },
+            "Property": "ROW_CREATED_BY"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f7e8156b33844f16a4d6",
+        "ordinal": 9,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Well Status Reference"
+              }
+            },
+            "Property": "ROW_CREATED_DATE"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ceeb67dcc20b1b12df3d",
+        "ordinal": 10,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "Spud Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "614d25fd23a05e8a5449",
+        "ordinal": 11,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Well Status Reference"
+              }
+            },
+            "Property": "STATUS_TYPE"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3644708582c3db5650dc",
+        "ordinal": 12,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "WELL NAME"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "p",
+              "Entity": "PPDM Extraction",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "p"
+                            }
+                          },
+                          "Property": "WELL NAME"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "filterSortOrder": "Custom"
+  }
+}

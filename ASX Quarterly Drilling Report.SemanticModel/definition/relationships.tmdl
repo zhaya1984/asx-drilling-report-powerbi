@@ -1,0 +1,69 @@
+relationship 69ea6efe-1984-4410-8c40-9474add94fca
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'PPDM Extraction'.'Spud Date'
+	toColumn: LocalDateTable_cb70dd21-1189-4ca7-a8ea-dfb0ddf44384.Date
+
+relationship e006ee66-fe90-4868-bb9f-ed2ba30d8623
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'PPDM Extraction'.'Latest ST Spud Quarter Sort'
+	toColumn: LocalDateTable_8bd34954-3ab1-4071-af7c-6389fbf325ff.Date
+
+relationship b860eadf-d0d7-4672-8675-aeda59c80769
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'PPDM Extraction'.'Child Spud Date'
+	toColumn: LocalDateTable_749d6f43-ea86-4456-a550-f3dabc2ef076.Date
+
+relationship 4728dc31-dc78-4ca2-b971-a3a01116cb17
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'PPDM Extraction'.'Child Rig Release Date'
+	toColumn: LocalDateTable_7e6cde07-3085-4bdd-9b40-a5ffe918231f.Date
+
+relationship 9ec22c65-0a23-47d4-b27c-dccff5e30b95
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Well Status Reference'.EFFECTIVE_DATE
+	toColumn: LocalDateTable_51e6c98f-740a-4eb0-bd13-b873d8cc58bc.Date
+
+relationship 6060be4e-c11c-4241-965a-45466ac63679
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Well Status Reference'.EXPIRY_DATE
+	toColumn: LocalDateTable_e4298331-5c90-4745-82da-bffb5210e6f4.Date
+
+relationship e19d74cb-ac8c-4ef7-8ca3-5226c88f25be
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Well Status Reference'.ROW_CHANGED_DATE
+	toColumn: LocalDateTable_9fbefd02-2030-4dbf-b757-fca1f2023829.Date
+
+relationship 3f350419-4762-464b-ac3d-b9154d6895ad
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Well Status Reference'.ROW_CREATED_DATE
+	toColumn: LocalDateTable_e201c95b-88f8-440c-b543-47c51bca05d7.Date
+
+relationship c548de38-ab39-4134-b01d-5b17036ebecc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Well Status Statistics'.SPUD_DATE
+	toColumn: LocalDateTable_de63fbae-0572-4ec7-ad14-6d61dfa095e1.Date
+
+relationship 2c5ac3b1-b87f-94a6-3d3a-fc976d12a3e2
+	fromColumn: 'Well Status Statistics'.CURRENT_STATUS
+	toColumn: 'Well Status Reference'.STATUS
+
+relationship 76456b72-978b-059b-2429-45a1834b77bc
+	fromColumn: 'Quarter Bridge'.'Well Report Quarter'
+	toColumn: Calendar.Quarter
+
+relationship e11b722e-ad9a-22a3-d798-bac20458e64a
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Quarter Bridge'.'WELL NAME'
+	toColumn: 'PPDM Extraction'.'WELL NAME'
+
+relationship bd30ca2c-d9a7-4db0-8088-48d65fdf759e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'PPDM Extraction'.'Rig Release Date'
+	toColumn: LocalDateTable_d86e3b54-52ef-461d-821f-d1f297f2ee18.Date
+
+relationship 27dd77b7-e307-c0ce-f63c-03e2968f9d0d
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'PPDM Extraction'.'WELL NAME'
+	toColumn: 'Well Status Statistics'.WELL_NAME
+

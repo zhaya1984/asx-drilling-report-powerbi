@@ -1,0 +1,781 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "ad1d9dc2bbcd332aae36",
+  "position": {
+    "x": 0,
+    "y": 197.44680851063831,
+    "z": 0,
+    "height": 524.25531914893622,
+    "width": 1280
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PPDM Extraction"
+                    }
+                  },
+                  "Property": "Basin"
+                }
+              },
+              "queryRef": "PPDM Extraction.Basin",
+              "nativeQueryRef": "Basin"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PPDM Extraction"
+                    }
+                  },
+                  "Property": "Product Type"
+                }
+              },
+              "queryRef": "PPDM Extraction.Product Type",
+              "nativeQueryRef": "Product Type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PPDM Extraction"
+                    }
+                  },
+                  "Property": "Current Class"
+                }
+              },
+              "queryRef": "PPDM Extraction.Current Class",
+              "nativeQueryRef": "Current Class"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PPDM Extraction"
+                    }
+                  },
+                  "Property": "WELL NAME"
+                }
+              },
+              "queryRef": "Query Current.WELL NAME",
+              "nativeQueryRef": "WELL NAME"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PPDM Extraction"
+                    }
+                  },
+                  "Property": "STATE"
+                }
+              },
+              "queryRef": "Query Current.STATE",
+              "nativeQueryRef": "STATE"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PPDM Extraction"
+                    }
+                  },
+                  "Property": "WORKING INTEREST"
+                }
+              },
+              "queryRef": "PPDM Extraction.WORKING INTEREST",
+              "nativeQueryRef": "WORKING INTEREST"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PPDM Extraction"
+                    }
+                  },
+                  "Property": "STATUS"
+                }
+              },
+              "queryRef": "Query Current.STATUS",
+              "nativeQueryRef": "STATUS"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PPDM Extraction"
+                    }
+                  },
+                  "Property": "2nd Class"
+                }
+              },
+              "queryRef": "PPDM Extraction.2nd Class",
+              "nativeQueryRef": "Remarks",
+              "displayName": "Remarks"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PPDM Extraction"
+                    }
+                  },
+                  "Property": "Reporting Spud Quarter"
+                }
+              },
+              "queryRef": "PPDM Extraction.Reporting Spud Quarter",
+              "nativeQueryRef": "Reporting Spud Quarter"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PPDM Extraction"
+                    }
+                  },
+                  "Property": "Sidetrack/Deepen Well Spud Summary"
+                }
+              },
+              "queryRef": "PPDM Extraction.Sidetrack/Deepen Well Spud Summary",
+              "nativeQueryRef": "Sidetrack/Deepen Well Spud Summary"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PPDM Extraction"
+                    }
+                  },
+                  "Property": "Asset Verification"
+                }
+              },
+              "queryRef": "PPDM Extraction.Asset Verification",
+              "nativeQueryRef": "Asset Verification"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "PPDM Extraction"
+                  }
+                },
+                "Property": "WELL NAME"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridHorizontalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            },
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "136.77023990474424D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Query Current.WELL NAME"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "95.41407063391136D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Query Current.STATE"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "132.00323554685738D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Query Current.STATUS"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "127.14713409792012D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "PPDM Extraction.Reporting Spud Quarter"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "123.75298619603785D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "PPDM Extraction.Sidetrack/Deepen Well Spud Summary"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "141.69514651266482D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "PPDM Extraction.Asset Verification"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bdb1b7fe9a9b54533ca4",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "2nd Class"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b6763c5d3c884a837d80",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calendar"
+              }
+            },
+            "Property": "Quarter"
+          }
+        },
+        "type": "TopN",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "subquery",
+              "Expression": {
+                "Subquery": {
+                  "Query": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "Calendar",
+                        "Type": 0
+                      }
+                    ],
+                    "Select": [
+                      {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "c"
+                            }
+                          },
+                          "Property": "Quarter"
+                        },
+                        "Name": "field"
+                      }
+                    ],
+                    "OrderBy": [
+                      {
+                        "Direction": 2,
+                        "Expression": {
+                          "Aggregation": {
+                            "Expression": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "c"
+                                  }
+                                },
+                                "Property": "Quarter Sort"
+                              }
+                            },
+                            "Function": 0
+                          }
+                        }
+                      }
+                    ],
+                    "Top": 2
+                  }
+                }
+              },
+              "Type": 2
+            },
+            {
+              "Name": "c",
+              "Entity": "Calendar",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "c"
+                          }
+                        },
+                        "Property": "Quarter"
+                      }
+                    }
+                  ],
+                  "Table": {
+                    "SourceRef": {
+                      "Source": "subquery"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "1131008411a9dede9082",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "Basin"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "223fe20767480934a5f9",
+        "ordinal": 3,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "Current Class"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "385838b1eac5501760b1",
+        "ordinal": 4,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "Product Type"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7187aa18a8026b0af397",
+        "ordinal": 5,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "Spud Date"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "adc7cb6ac31704463baf",
+        "ordinal": 6,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "STATE"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "dec0e3a7e698193c9873",
+        "ordinal": 7,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "STATUS"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "36957c3469d22b66b924",
+        "ordinal": 8,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "WELL NAME"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f2fd10ff34b964834189",
+        "ordinal": 9,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "Reporting Spud Quarter"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "221734f9cee0c2723b5e",
+        "ordinal": 10,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "DW/ST WELL"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "a0b2a83efa5208139267",
+        "ordinal": 11,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "Sidetrack/Deepen Well Spud Summary"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d3eb7b209201c532e469",
+        "ordinal": 12,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "Asset Verification"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fbb37e4ad1b0d572d191",
+        "ordinal": 13,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "Rig_Release_Date"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "708186eee8bb038817a4",
+        "ordinal": 14,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "Rig_Release_Date"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "1cb004e243141ed12ea9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "PPDM Extraction"
+              }
+            },
+            "Property": "WORKING INTEREST"
+          }
+        },
+        "type": "Categorical"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  }
+}

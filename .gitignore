@@ -1,0 +1,5 @@
+# Power BI local cache / user settings (may contain data and tenant IDs)
+**/.pbi/
+*.abf
+*.pbix
+.DS_Store

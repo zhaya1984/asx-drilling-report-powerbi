@@ -1,0 +1,196 @@
+table 'Well Status Reference'
+	lineageTag: c888005a-692c-4515-99c9-03c289374cb3
+
+	column STATUS_TYPE
+		dataType: string
+		lineageTag: c37325d3-9dcd-4720-8406-ae46250ce5cd
+		summarizeBy: none
+		sourceColumn: STATUS_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS
+		dataType: string
+		lineageTag: 1ea03e7c-e73d-4522-9801-0959f2f1398b
+		summarizeBy: none
+		sourceColumn: STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column ABBREVIATION
+		dataType: string
+		lineageTag: 29998b2a-125b-4f52-9f76-4b121490e5a3
+		summarizeBy: none
+		sourceColumn: ABBREVIATION
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVE_IND
+		dataType: string
+		lineageTag: 39d9d647-de9b-400c-895e-9b9ade472ead
+		summarizeBy: none
+		sourceColumn: ACTIVE_IND
+
+		annotation SummarizationSetBy = Automatic
+
+	column EFFECTIVE_DATE
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 38b82685-5190-4624-b8eb-76517ac665a5
+		summarizeBy: none
+		sourceColumn: EFFECTIVE_DATE
+
+		variation Variation
+			isDefault
+			relationship: 9ec22c65-0a23-47d4-b27c-dccff5e30b95
+			defaultHierarchy: LocalDateTable_51e6c98f-740a-4eb0-bd13-b873d8cc58bc.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column EXPIRY_DATE
+		dataType: dateTime
+		formatString: d/mm/yy
+		lineageTag: 0b4b4fac-bcfb-4000-ad32-69a03f71fc68
+		summarizeBy: none
+		sourceColumn: EXPIRY_DATE
+
+		variation Variation
+			isDefault
+			relationship: 6060be4e-c11c-4241-965a-45466ac63679
+			defaultHierarchy: LocalDateTable_e4298331-5c90-4745-82da-bffb5210e6f4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'LONG NAME'
+		dataType: string
+		lineageTag: 42d5b410-047b-4c36-b747-0a2d569c621d
+		summarizeBy: none
+		sourceColumn: LONG NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column PPDM_GUID
+		dataType: string
+		lineageTag: b74012ce-7292-48ff-9bdd-b7221a2ecebf
+		summarizeBy: none
+		sourceColumn: PPDM_GUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column REMARK
+		dataType: string
+		lineageTag: c62bd35c-aa43-4e99-a231-899be7dd5f49
+		summarizeBy: none
+		sourceColumn: REMARK
+
+		annotation SummarizationSetBy = Automatic
+
+	column SHORT_NAME
+		dataType: string
+		lineageTag: e3ed5073-e71f-4e07-836b-6b4e73088980
+		summarizeBy: none
+		sourceColumn: SHORT_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE
+		dataType: string
+		lineageTag: 19caf642-3b51-4c5e-8aef-c309e2b99d2f
+		summarizeBy: none
+		sourceColumn: SOURCE
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS_GROUP
+		dataType: string
+		lineageTag: f1df161b-c999-4f24-b2ea-ef17112295f4
+		summarizeBy: none
+		sourceColumn: STATUS_GROUP
+
+		annotation SummarizationSetBy = Automatic
+
+	column ROW_CHANGED_BY
+		dataType: string
+		lineageTag: a4144f19-035b-491d-9c33-1c454cb60d8c
+		summarizeBy: none
+		sourceColumn: ROW_CHANGED_BY
+
+		annotation SummarizationSetBy = Automatic
+
+	column ROW_CHANGED_DATE
+		dataType: dateTime
+		formatString: d/mm/yy
+		lineageTag: 73fd9887-a988-4e43-afc6-7dd547b142b4
+		summarizeBy: none
+		sourceColumn: ROW_CHANGED_DATE
+
+		variation Variation
+			isDefault
+			relationship: e19d74cb-ac8c-4ef7-8ca3-5226c88f25be
+			defaultHierarchy: LocalDateTable_9fbefd02-2030-4dbf-b757-fca1f2023829.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column ROW_CREATED_BY
+		dataType: string
+		lineageTag: 0f353875-50de-4942-8cb2-eb5a9f6e22bb
+		summarizeBy: none
+		sourceColumn: ROW_CREATED_BY
+
+		annotation SummarizationSetBy = Automatic
+
+	column ROW_CREATED_DATE
+		dataType: dateTime
+		formatString: d/mm/yy
+		lineageTag: 0bc643f0-c915-4f41-8228-0b8d5dd732ca
+		summarizeBy: none
+		sourceColumn: ROW_CREATED_DATE
+
+		variation Variation
+			isDefault
+			relationship: 3f350419-4762-464b-ac3d-b9154d6895ad
+			defaultHierarchy: LocalDateTable_e201c95b-88f8-440c-b543-47c51bca05d7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column ROW_QUALITY
+		dataType: string
+		lineageTag: 3e196400-f078-4c45-9ba0-d44514d1ca67
+		summarizeBy: none
+		sourceColumn: ROW_QUALITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column PLOT_SYMBOL
+		dataType: string
+		lineageTag: 20d86b70-6685-46d7-ac20-bd263a52c135
+		summarizeBy: none
+		sourceColumn: PLOT_SYMBOL
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Well Status Reference' = m
+		mode: import
+		source =
+				let
+				    // Demo mode uses the embedded synthetic sample data (see /sample-data); otherwise query PPDM directly.
+				    Source = if UseSampleData
+				        then LoadSampleData("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", {{"EFFECTIVE_DATE", type datetime}, {"EXPIRY_DATE", type datetime}, {"ROW_CHANGED_DATE", type datetime}, {"ROW_CREATED_DATE", type datetime}})
+				        else Oracle.Database(PPDM_Connection, [HierarchicalNavigation=true, Query="select * from r_well_status #(lf)"]),
+				    #"Sorted Rows1" = Table.Sort(Source,{{"STATUS", Order.Ascending}}),
+				    #"Sorted Rows" = Table.Sort(#"Sorted Rows1",{{"STATUS", Order.Ascending}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Sorted Rows", each ([STATUS_TYPE] = "ONLINE_STATUS" or [STATUS_TYPE] = "WELL_STATUS")),
+				    #"Renamed Columns" = Table.RenameColumns(#"Filtered Rows",{{"LONG_NAME", "LONG NAME"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

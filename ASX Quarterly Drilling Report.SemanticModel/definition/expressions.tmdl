@@ -1,0 +1,26 @@
+expression PPDM_Connection = "your-oracle-host:1521/your_ppdm_service" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: de3063f4-face-4f9f-aed5-068c25600e86
+
+	annotation PBI_ResultType = Text
+
+expression UseSampleData = true meta [IsParameterQuery=true, Type="Logical", IsParameterQueryRequired=true]
+	lineageTag: 3f79e6fa-1e4b-48cb-8068-1669103a869d
+
+	annotation PBI_ResultType = Logical
+
+expression LoadSampleData =
+		// Decodes an embedded sample table (JSON rows, header first, deflated + base64),
+		// converts empty strings to null, types every column as text except the overrides.
+		(payload as text, typeOverrides as list) as table =>
+		let
+		    Rows = Json.Document(Binary.Decompress(Binary.FromText(payload, BinaryEncoding.Base64), Compression.Deflate)),
+		    Raw = Table.FromRows(List.Skip(Rows, 1), Rows{0}),
+		    Blanks = Table.TransformColumns(Raw, {}, each if _ = "" then null else _),
+		    OverrideNames = List.Transform(typeOverrides, each _{0}),
+		    TextTypes = List.Transform(List.Difference(Table.ColumnNames(Blanks), OverrideNames), each {_, type text}),
+		    Typed = Table.TransformColumnTypes(Blanks, TextTypes & typeOverrides, "en-AU")
+		in
+		    Typed
+	lineageTag: fc5bbf0c-590c-498a-81f8-2c36e4b240ac
+
+	annotation PBI_ResultType = Function

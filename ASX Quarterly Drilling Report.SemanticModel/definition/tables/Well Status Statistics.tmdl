@@ -1,0 +1,106 @@
+table 'Well Status Statistics'
+	lineageTag: 521640ae-b891-478b-bc04-93fba5bbab40
+
+	column STATUS_TYPE
+		dataType: string
+		lineageTag: 3af43ecf-7ebe-426a-ab4c-1c4d8ba6aa38
+		summarizeBy: none
+		sourceColumn: STATUS_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CURRENT_STATUS
+		dataType: string
+		lineageTag: 48c16601-fc81-4ce9-8a70-bd49ead65497
+		summarizeBy: none
+		sourceColumn: CURRENT_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS_DESCRIPTION
+		dataType: string
+		lineageTag: e07cb88e-dc31-4cdc-952c-fbccded5c24f
+		summarizeBy: none
+		sourceColumn: STATUS_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVE_IND
+		dataType: string
+		lineageTag: e495aaf5-4e8b-4cea-8054-1ee5ac56963d
+		summarizeBy: none
+		sourceColumn: ACTIVE_IND
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTRY
+		dataType: string
+		lineageTag: bcc9e36d-142f-425a-9564-a21c5e65801a
+		summarizeBy: none
+		sourceColumn: COUNTRY
+
+		annotation SummarizationSetBy = Automatic
+
+	column UWI
+		dataType: string
+		lineageTag: 3c3c9941-962a-47ff-80a7-b2606c575409
+		summarizeBy: none
+		sourceColumn: UWI
+
+		annotation SummarizationSetBy = Automatic
+
+	column WELL_NAME
+		dataType: string
+		lineageTag: f4ed7490-c638-4a14-8882-4ee03e093412
+		summarizeBy: none
+		sourceColumn: WELL_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column WELL_NUM
+		dataType: string
+		lineageTag: fab1e5fa-0404-42d3-8213-b985587e024a
+		summarizeBy: none
+		sourceColumn: WELL_NUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRIMARY_SOURCE
+		dataType: string
+		lineageTag: ef67f422-c027-428c-b2c5-394868a30ba1
+		summarizeBy: none
+		sourceColumn: PRIMARY_SOURCE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPUD_DATE
+		dataType: dateTime
+		formatString: d/mm/yy
+		lineageTag: 8fabcddc-b1d1-479b-962b-068be1c1e5c5
+		summarizeBy: none
+		sourceColumn: SPUD_DATE
+
+		variation Variation
+			isDefault
+			relationship: c548de38-ab39-4134-b01d-5b17036ebecc
+			defaultHierarchy: LocalDateTable_de63fbae-0572-4ec7-ad14-6d61dfa095e1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition 'Well Status Statistics' = m
+		mode: import
+		source =
+				let
+				    // Demo mode uses the embedded synthetic sample data (see /sample-data); otherwise query PPDM directly.
+				    Source = if UseSampleData
+				        then LoadSampleData("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", {{"SPUD_DATE", type datetime}})
+				        else Oracle.Database(PPDM_Connection, [HierarchicalNavigation=true, Query="SELECT #(lf)    a.COUNTRY AS COUNTRY,#(lf)    a.STATUS_TYPE,#(lf)    a.CURRENT_STATUS,#(lf)    COALESCE(WST.LONG_NAME, WST.SHORT_NAME, WST.ABBREVIATION, a.CURRENT_STATUS) AS STATUS_DESCRIPTION,#(lf)    WST.ACTIVE_IND,#(lf)    a.UWI,#(lf)    a.WELL_NAME,#(lf)    a.WELL_NUM,#(lf)    a.PRIMARY_SOURCE,#(lf)    a.SPUD_DATE#(lf)FROM WELL a#(lf)LEFT JOIN R_WELL_STATUS WST #(lf)    ON a.STATUS_TYPE = WST.STATUS_TYPE #(lf)   AND a.CURRENT_STATUS = WST.STATUS#(lf)#(lf)WHERE a.COUNTRY IN ('PG','AU')#(lf)#(lf)"])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

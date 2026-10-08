@@ -1,0 +1,34 @@
+model Model
+	culture: en-GB
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-AU
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["PPDM_Connection","UseSampleData","LoadSampleData","PPDM Extraction","Column Definition","Well Status Reference","Calendar","Well Status Statistics","Quarter Bridge"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'PPDM Extraction'
+ref table DateTableTemplate_26c2916d-d89f-4483-9e9a-b5bd34098cbe
+ref table LocalDateTable_cb70dd21-1189-4ca7-a8ea-dfb0ddf44384
+ref table LocalDateTable_8bd34954-3ab1-4071-af7c-6389fbf325ff
+ref table 'Column Definition'
+ref table LocalDateTable_749d6f43-ea86-4456-a550-f3dabc2ef076
+ref table LocalDateTable_7e6cde07-3085-4bdd-9b40-a5ffe918231f
+ref table 'Well Status Reference'
+ref table LocalDateTable_51e6c98f-740a-4eb0-bd13-b873d8cc58bc
+ref table LocalDateTable_e4298331-5c90-4745-82da-bffb5210e6f4
+ref table LocalDateTable_9fbefd02-2030-4dbf-b757-fca1f2023829
+ref table LocalDateTable_e201c95b-88f8-440c-b543-47c51bca05d7
+ref table Calendar
+ref table 'Well Status Statistics'
+ref table LocalDateTable_de63fbae-0572-4ec7-ad14-6d61dfa095e1
+ref table 'Quarter Bridge'
+ref table LocalDateTable_d86e3b54-52ef-461d-821f-d1f297f2ee18
+
+ref cultureInfo en-GB
+

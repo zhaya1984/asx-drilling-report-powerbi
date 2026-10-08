@@ -1,0 +1,311 @@
+table 'PPDM Extraction'
+	lineageTag: 5fa8b04c-55be-4344-a276-692ff7803d23
+
+	column 'WELL NAME'
+		dataType: string
+		lineageTag: e2d6d002-a973-4aa3-9491-70d15bba75d8
+		summarizeBy: none
+		sourceColumn: WELL NAME
+		sortByColumn: 'Combined Sort'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATE
+		dataType: string
+		lineageTag: 74d145cb-46f4-4c69-9790-902b089568ef
+		summarizeBy: none
+		sourceColumn: STATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS
+		dataType: string
+		lineageTag: 6e747539-f4c3-4072-87f9-75479ead972b
+		summarizeBy: none
+		sourceColumn: STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Type'
+		dataType: string
+		lineageTag: 42da852d-8c73-4bd5-bd02-40bf4d7336e6
+		summarizeBy: none
+		sourceColumn: Product Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Operated/Interest
+		dataType: string
+		lineageTag: 38922881-6986-4db2-8fce-249e1b953b16
+		summarizeBy: none
+		sourceColumn: Operated/Interest
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Environment Type'
+		dataType: string
+		lineageTag: 8a7e920a-52fb-465b-b928-20181ee12d66
+		summarizeBy: none
+		sourceColumn: Environment Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 2ebb0868-6fd6-477b-8094-22c02823b572
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Basin
+		dataType: string
+		lineageTag: faa8a411-b20d-4598-af5e-a3b42d2eab1f
+		summarizeBy: none
+		sourceColumn: Basin
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Initial Operator'
+		dataType: string
+		lineageTag: 5a167222-0db2-498d-9b35-c9485823ff27
+		summarizeBy: none
+		sourceColumn: Initial Operator
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Current Operator'
+		dataType: string
+		lineageTag: 4e99453c-cca7-4b58-97e3-54941d7cf82e
+		summarizeBy: none
+		sourceColumn: Current Operator
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Current JV'
+		dataType: string
+		lineageTag: 6030fe18-a155-4d9b-810a-832deec5df15
+		summarizeBy: none
+		sourceColumn: Current JV
+
+		annotation SummarizationSetBy = Automatic
+
+	column Permit
+		dataType: string
+		lineageTag: fa71b573-9492-4a1c-b6c1-adf5bf92e08a
+		summarizeBy: none
+		sourceColumn: Permit
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Current Class'
+		dataType: string
+		lineageTag: c7d883f3-0da5-4d2f-8635-cce04fe18bd1
+		summarizeBy: none
+		sourceColumn: Current Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2nd Class'
+		dataType: string
+		lineageTag: cf1079c6-dcc5-46a7-8af5-ea30969c4703
+		summarizeBy: none
+		sourceColumn: 2nd Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Spud Date'
+		dataType: dateTime
+		formatString: d/mm/yy
+		lineageTag: 3fcd4d90-beb0-4e62-8a8e-ef97828b370b
+		summarizeBy: none
+		sourceColumn: Spud Date
+
+		variation Variation
+			isDefault
+			relationship: 69ea6efe-1984-4410-8c40-9474add94fca
+			defaultHierarchy: LocalDateTable_cb70dd21-1189-4ca7-a8ea-dfb0ddf44384.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Latest ST Spud Quarter Sort'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 036c474e-f52a-40e0-a34b-4108e08f5141
+		summarizeBy: none
+		sourceColumn: Latest ST Spud Quarter Sort
+
+		variation Variation
+			isDefault
+			relationship: e006ee66-fe90-4868-bb9f-ed2ba30d8623
+			defaultHierarchy: LocalDateTable_8bd34954-3ab1-4071-af7c-6389fbf325ff.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Child Spud Date'
+		dataType: dateTime
+		formatString: d/mm/yy
+		lineageTag: 06a16164-75ed-4113-af4d-ae07fc2d3217
+		summarizeBy: none
+		sourceColumn: Child Spud Date
+
+		variation Variation
+			isDefault
+			relationship: b860eadf-d0d7-4672-8675-aeda59c80769
+			defaultHierarchy: LocalDateTable_749d6f43-ea86-4456-a550-f3dabc2ef076.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Child Rig Release Date'
+		dataType: dateTime
+		formatString: d/mm/yy
+		lineageTag: ebccfc11-50ec-45df-9876-0540ac8e3fce
+		summarizeBy: none
+		sourceColumn: Child Rig Release Date
+
+		variation Variation
+			isDefault
+			relationship: 4728dc31-dc78-4ca2-b971-a3a01116cb17
+			defaultHierarchy: LocalDateTable_7e6cde07-3085-4bdd-9b40-a5ffe918231f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Combined Sort'
+		dataType: int64
+		lineageTag: e4936cf8-d382-4247-9400-f0a8846e93b1
+		summarizeBy: sum
+		sourceColumn: Combined Sort
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Spud Quarter Label'
+		dataType: string
+		lineageTag: eaa69533-340d-4d51-a7f4-da5fdd832980
+		summarizeBy: none
+		sourceColumn: Spud Quarter Label
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Child Rig Release Quarter Label'
+		dataType: string
+		lineageTag: 7e69f1f6-648f-4372-b39b-12cd2cb98a67
+		summarizeBy: none
+		sourceColumn: Child Rig Release Quarter Label
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Spud Quarter'
+		dataType: string
+		lineageTag: 910f1d3a-e168-424d-a072-60d9407f3acd
+		summarizeBy: none
+		sourceColumn: Reporting Spud Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DW/ST WELL'
+		dataType: string
+		lineageTag: 2945e28c-062d-4b3c-a013-d358248c3d1a
+		summarizeBy: none
+		sourceColumn: DW/ST WELL
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rig Release Quarter'
+		dataType: string
+		lineageTag: 27c46c69-c048-413f-9f98-551378dcec12
+		summarizeBy: none
+		sourceColumn: Rig Release Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Child Spud Quarter'
+		dataType: string
+		lineageTag: 8262fc50-209d-45d0-a99a-c06c0ef946f9
+		summarizeBy: none
+		sourceColumn: Child Spud Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sidetrack/Deepen Well Spud Summary'
+		dataType: string
+		lineageTag: 5c795b28-bf54-4a40-949d-d125fc1b851e
+		summarizeBy: none
+		sourceColumn: Sidetrack/Deepen Well Spud Summary
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Asset Verification'
+		dataType: string
+		lineageTag: 74a75c80-8265-4766-b859-a5122fe298b0
+		summarizeBy: none
+		sourceColumn: Asset Verification
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Well Category'
+		dataType: string
+		lineageTag: 8284e0c3-abe6-4a86-8645-7a13644c4806
+		summarizeBy: none
+		sourceColumn: Well Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'WORKING INTEREST'
+		dataType: string
+		lineageTag: 8b743bed-3b20-4a72-9821-6b7b0ad443ce
+		summarizeBy: none
+		sourceColumn: WORKING INTEREST
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PPDM Status'
+		dataType: string
+		lineageTag: f7ebe30b-b4c0-4b09-aa65-45eec97c40d5
+		summarizeBy: none
+		sourceColumn: PPDM Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rig Release Date'
+		dataType: dateTime
+		formatString: d/mm/yy
+		lineageTag: fd0dea98-da8a-4622-8591-eecf48401f7a
+		summarizeBy: none
+		sourceColumn: Rig Release Date
+
+		variation Variation
+			isDefault
+			relationship: bd30ca2c-d9a7-4db0-8088-48d65fdf759e
+			defaultHierarchy: LocalDateTable_d86e3b54-52ef-461d-821f-d1f297f2ee18.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition 'PPDM Extraction-9db455cd-3a18-44ae-8d90-51af1fce299f' = m
+		mode: import
+		source =
+				let
+				    // Demo mode uses the embedded synthetic sample data (see /sample-data); otherwise query PPDM directly.
+				    Source = if UseSampleData
+				        then LoadSampleData("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", {{"Spud Date", type datetime}, {"Rig Release Date", type datetime}, {"Child Spud Date", type datetime}, {"Child Rig Release Date", type datetime}, {"Latest ST Spud Quarter Sort", type datetime}, {"Combined Sort", Int64.Type}})
+				        else Oracle.Database(PPDM_Connection, [HierarchicalNavigation=true, Query="SELECT#(lf)#(lf)/*=========================================================================#(lf)    WELL IDENTIFICATION#(lf)=========================================================================*/#(lf)#(lf)    -- For a sidetrack, display the original surface well name.#(lf)    -- Otherwise, display the well's own name.#(lf)    COALESCE(wx.surface_well_name, w.WELL_NAME)                          AS ""WELL NAME"",#(lf)#(lf)    -- Latest sidetrack / deepen child well; NULL when no child exists.#(lf)    ls.latest_well_name                                                  AS ""DW/ST WELL"",#(lf)#(lf)    w.PROVINCE_STATE                                                     AS ""STATE"",#(lf)#(lf)#(lf)/*=========================================================================#(lf)    SIDETRACK / DEEPEN WELL SUMMARY#(lf)=========================================================================*/#(lf)#(lf)    -- Human-readable summary of the original well spud quarter and the#(lf)    -- latest sidetrack / deepen child's name and spud quarter.#(lf)    -- Returns NULL when no child exists or either spud date is invalid.#(lf)    CASE#(lf)        WHEN ls.parent_uwi IS NULL THEN NULL#(lf)        WHEN w.SPUD_DATE IS NULL OR w.SPUD_DATE < DATE '1900-01-01' THEN NULL#(lf)        WHEN ls.latest_spud_date IS NULL OR ls.latest_spud_date < DATE '1900-01-01' THEN NULL#(lf)        ELSE 'Original well spud at Q' || TO_CHAR(w.SPUD_DATE, 'Q') || ' ' || TO_CHAR(w.SPUD_DATE, 'YYYY')#(lf)             || ', ' || ls.latest_well_name#(lf)             || ' spud at Q' || TO_CHAR(ls.latest_spud_date, 'Q') || ' ' || TO_CHAR(ls.latest_spud_date, 'YYYY')#(lf)    END                                                                  AS ""Sidetrack/Deepen Well Spud Summary"",#(lf)#(lf)#(lf)/*=========================================================================#(lf)    COMPANY WORKING INTEREST#(lf)=========================================================================*/#(lf)#(lf)    -- Map the current JV contract name to the company's working interest.#(lf)    -- Illustrative values only.#(lf)    CASE jv.CONTRACT_NAME#(lf)        WHEN 'JV Alpha'               THEN '60.00%'#(lf)        WHEN 'JV Bravo'               THEN '75.00%'#(lf)        WHEN 'JV Charlie'             THEN '30.00%'#(lf)        WHEN 'JV Delta Unit'          THEN '50.00%'#(lf)        WHEN 'Permit Echo'            THEN '100.00%'#(lf)        WHEN 'Permit Foxtrot'         THEN '25.00%'#(lf)        WHEN 'Permit Golf'            THEN '42.50%'#(lf)        ELSE NULL#(lf)    END                                                                  AS ""WORKING INTEREST"",#(lf)#(lf)#(lf)/*=========================================================================#(lf)    WELL STATUS#(lf)=========================================================================*/#(lf)#(lf)    -- Use the latest sidetrack / deepen child status when one exists;#(lf)    -- otherwise, use the parent well's current status.#(lf)    CASE#(lf)        WHEN CASE WHEN ls.parent_uwi IS NOT NULL THEN ls.latest_status ELSE w.CURRENT_STATUS END#(lf)             IN ('SUG','SUGO','SUOG','SUO','SUGI','SFD','CS','SST')      THEN 'C&S, Successful'#(lf)        WHEN CASE WHEN ls.parent_uwi IS NOT NULL THEN ls.latest_status ELSE w.CURRENT_STATUS END#(lf)             IN ('PSG','PSO')                                            THEN 'P&S, Successful'#(lf)        WHEN CASE WHEN ls.parent_uwi IS NOT NULL THEN ls.latest_status ELSE w.CURRENT_STATUS END#(lf)             IN ('SCG','SCGC','SCGO','SCO','SCW')                       THEN 'C&C, Successful'#(lf)        WHEN CASE WHEN ls.parent_uwi IS NOT NULL THEN ls.latest_status ELSE w.CURRENT_STATUS END#(lf)             IN ('ABOS','ABGO','ABGS','ABS','AST','ABJ','PA','PAG','PAO','ABDH') THEN 'P&A, Unsuccessful'#(lf)        WHEN CASE WHEN ls.parent_uwi IS NOT NULL THEN ls.latest_status ELSE w.CURRENT_STATUS END#(lf)             = 'OB'                                                      THEN 'Observation Well'#(lf)        WHEN CASE WHEN ls.parent_uwi IS NOT NULL THEN ls.latest_status ELSE w.CURRENT_STATUS END#(lf)             = 'DRI'                                                     THEN 'Drilling'#(lf)        ELSE '-'#(lf)    END                                                                  AS ""STATUS"",#(lf)#(lf)    -- Raw PPDM status code using the same parent / child selection logic.#(lf)    CASE#(lf)        WHEN ls.parent_uwi IS NOT NULL THEN ls.latest_status#(lf)        ELSE w.CURRENT_STATUS#(lf)    END                                                                  AS ""PPDM Status"",#(lf)#(lf)#(lf)/*=========================================================================#(lf)    WELL ATTRIBUTES#(lf)=========================================================================*/#(lf)#(lf)    null                                                                 AS ""Asset Verification"",#(lf)    w.CO_PRODUCT_TYPE                                                  AS ""Product Type"",#(lf)    o.ORGANIZATION_ID                                                    AS ""Operated/Interest"",#(lf)    w.ENVIRONMENT_TYPE                                                   AS ""Environment Type"",#(lf)    w.COUNTRY                                                            AS ""Country"",#(lf)    ps_get_well_component(w.uwi, 'BASIN', 100)                           AS ""Basin"",#(lf)    b.BA_NAME                                                            AS ""Initial Operator"",#(lf)    c.BA_NAME                                                            AS ""Current Operator"",#(lf)    jv.CONTRACT_NAME                                                     AS ""Current JV"",#(lf)    ps_get_well_component(w.uwi, 'PERMIT', 100)                          AS ""Permit"",#(lf)    w.CURRENT_CLASS                                                      AS ""Current Class"",#(lf)    w.CO_SECONDARY_CLASS_1                                             AS ""2nd Class"",#(lf)      -- Group the detailed current class into a reporting category used to#(lf)    -- distinguish exploration / appraisal, development and water wells.#(lf)    CASE#(lf)        WHEN w.CURRENT_CLASS IN ('EXP', 'APP', 'NFE') THEN 'EXP/APP'#(lf)        WHEN w.CURRENT_CLASS = 'DEV'                  THEN 'DEV'#(lf)        WHEN w.CURRENT_CLASS = 'WTR'                  THEN 'WATER'#(lf)        ELSE NULL#(lf)    END                                                                  AS ""Well Category"",#(lf)#(lf)#(lf)/*=========================================================================#(lf)    WELL DATES#(lf)=========================================================================*/#(lf)#(lf)    -- Parent well dates.#(lf)    w.SPUD_DATE                                                          AS ""Spud Date"",#(lf)    w.RIG_RELEASE_DATE                                                   AS ""Rig Release Date"",#(lf)#(lf)    -- Most recent valid sidetrack / deepen child dates.#(lf)    ls.latest_spud_date                                                  AS ""Child Spud Date"",#(lf)    ls.latest_rig_release_date                                           AS ""Child Rig Release Date"",#(lf)#(lf)#(lf)/*=========================================================================#(lf)    POWER BI SORT COLUMNS#(lf)=========================================================================*/#(lf)#(lf)    -- Sort key for the latest sidetrack spud quarter.#(lf)    CASE#(lf)        WHEN ls.parent_uwi IS NULL THEN NULL#(lf)        WHEN ls.latest_spud_date IS NULL THEN NULL#(lf)        WHEN ls.latest_spud_date < DATE '1900-01-01' THEN NULL#(lf)        ELSE TRUNC(ls.latest_spud_date, 'Q')#(lf)    END                                                                  AS ""Latest ST Spud Quarter Sort"",#(lf)#(lf)    -- Three-level numeric sort: Current Class -> Basin -> Product Type.#(lf)    CASE w.CURRENT_CLASS#(lf)        WHEN 'EXP'  THEN 1#(lf)        WHEN 'APP'  THEN 1#(lf)        WHEN 'NFE'  THEN 1#(lf)        WHEN 'DEV'  THEN 4#(lf)        WHEN 'WTR'  THEN 5#(lf)        ELSE 99#(lf)    END * 10000#(lf)    +#(lf)    CASE ps_get_well_component(w.uwi, 'BASIN', 100)#(lf)        WHEN 'Basin A' THEN 1#(lf)        WHEN 'Basin B' THEN 2#(lf)        WHEN 'Basin C' THEN 3#(lf)        WHEN 'Basin D' THEN 4#(lf)        WHEN 'Basin E' THEN 5#(lf)        WHEN 'Basin F' THEN 6#(lf)        WHEN 'Basin G' THEN 7#(lf)        ELSE 99#(lf)    END * 100#(lf)    +#(lf)    CASE w.CO_PRODUCT_TYPE#(lf)        WHEN 'OIL'  THEN 1#(lf)        WHEN 'GAS'  THEN 2#(lf)        WHEN 'OG'   THEN 3#(lf)        WHEN 'CSG'  THEN 4#(lf)        WHEN 'CDS'  THEN 5#(lf)        WHEN 'WTR'  THEN 6#(lf)        WHEN 'COAL' THEN 7#(lf)        ELSE 99#(lf)    END                                                                  AS ""Combined Sort"",#(lf)#(lf)#(lf)/*=========================================================================#(lf)    POWER BI QUARTER LABELS#(lf)=========================================================================*/#(lf)#(lf)    -- Parent well spud quarter.#(lf)    CASE#(lf)        WHEN w.SPUD_DATE IS NULL THEN NULL#(lf)        WHEN w.SPUD_DATE < DATE '1900-01-01' THEN NULL#(lf)        ELSE 'Q' || TO_CHAR(w.SPUD_DATE, 'Q') || ' ' || TO_CHAR(w.SPUD_DATE, 'YYYY')#(lf)    END                                                                  AS ""Spud Quarter Label"",#(lf)#(lf)    -- Parent well rig release quarter.#(lf)    CASE#(lf)        WHEN w.RIG_RELEASE_DATE IS NULL THEN NULL#(lf)        WHEN w.RIG_RELEASE_DATE < DATE '1900-01-01' THEN NULL#(lf)        ELSE 'Q' || TO_CHAR(w.RIG_RELEASE_DATE, 'Q') || ' ' || TO_CHAR(w.RIG_RELEASE_DATE, 'YYYY')#(lf)    END                                                                  AS ""Rig Release Quarter"",#(lf)#(lf)    -- Latest sidetrack / deepen child spud quarter.#(lf)    CASE#(lf)        WHEN ls.latest_spud_date IS NULL THEN NULL#(lf)        WHEN ls.latest_spud_date < DATE '1900-01-01' THEN NULL#(lf)        ELSE 'Q' || TO_CHAR(ls.latest_spud_date, 'Q') || ' ' || TO_CHAR(ls.latest_spud_date, 'YYYY')#(lf)    END                                                                  AS ""Child Spud Quarter"",#(lf)#(lf)    -- Latest sidetrack / deepen child rig release quarter.#(lf)    CASE#(lf)        WHEN ls.latest_rig_release_date IS NULL THEN NULL#(lf)        WHEN ls.latest_rig_release_date < DATE '1900-01-01' THEN NULL#(lf)        ELSE 'Q' || TO_CHAR(ls.latest_rig_release_date, 'Q') || ' ' || TO_CHAR(ls.latest_rig_release_date, 'YYYY')#(lf)    END                                                                  AS ""Child Rig Release Quarter Label"",#(lf)#(lf)    -- Effective reporting quarter: latest valid child spud quarter when#(lf)    -- available; otherwise, the parent well spud quarter.#(lf)    CASE#(lf)        WHEN COALESCE(ls.latest_spud_date, w.SPUD_DATE) IS NULL THEN NULL#(lf)        WHEN COALESCE(ls.latest_spud_date, w.SPUD_DATE) < DATE '1900-01-01' THEN NULL#(lf)        ELSE 'Q' || TO_CHAR(COALESCE(ls.latest_spud_date, w.SPUD_DATE), 'Q')#(lf)                 || ' ' || TO_CHAR(COALESCE(ls.latest_spud_date, w.SPUD_DATE), 'YYYY')#(lf)    END                                                                  AS ""Reporting Spud Quarter""#(lf)#(lf)#(lf)/*=========================================================================#(lf)    SOURCE TABLE#(lf)=========================================================================*/#(lf)#(lf)FROM WELL w#(lf)#(lf)#(lf)/*=========================================================================#(lf)    LOOKUP: CURRENT JOINT VENTURE#(lf)=========================================================================*/#(lf)#(lf)-- Retrieve the current JV contract name for each well.#(lf)LEFT JOIN (#(lf)    SELECT wc.uwi, c.CONTRACT_NAME#(lf)    FROM well_component wc#(lf)    JOIN contract c ON wc.contract_id = c.contract_id#(lf)    WHERE wc.WELL_COMPONENT_TYPE = 'JOINT_VENTURE_CURR'#(lf)) jv ON w.UWI = jv.UWI#(lf)#(lf)#(lf)/*=========================================================================#(lf)    LOOKUP: WELL ORIGIN#(lf)=========================================================================*/#(lf)#(lf)-- Retrieve the original surface well name through WELL_ORIGIN.#(lf)-- LEFT JOIN retains parent wells that do not have sidetracks.#(lf)LEFT JOIN (#(lf)    SELECT wx.uwi, w2.well_name AS surface_well_name#(lf)    FROM PPDM38.well w2#(lf)    JOIN PPDM38.well_xref wx ON w2.uwi = wx.uwi2#(lf)    WHERE wx.xref_type = 'WELL_ORIGIN'#(lf)) wx ON w.UWI = wx.UWI#(lf)#(lf)#(lf)/*=========================================================================#(lf)    LOOKUP: LATEST SIDETRACK / DEEPEN WELL#(lf)=========================================================================*/#(lf)#(lf)-- For each parent well, return the most recent child well based on spud date.#(lf)-- Children with missing or invalid spud dates are excluded.#(lf)-- Suspicious children with missing dates should be reviewed separately.#(lf)LEFT JOIN (#(lf)    SELECT DISTINCT#(lf)        wx.uwi2                                  AS parent_uwi,#(lf)        FIRST_VALUE(w2.WELL_NAME) OVER (#(lf)            PARTITION BY wx.uwi2#(lf)            ORDER BY w2.spud_date DESC#(lf)        )                                        AS latest_well_name,#(lf)        FIRST_VALUE(w2.CURRENT_STATUS) OVER (#(lf)            PARTITION BY wx.uwi2#(lf)            ORDER BY w2.spud_date DESC#(lf)        )                                        AS latest_status,#(lf)        FIRST_VALUE(w2.RIG_RELEASE_DATE) OVER (#(lf)            PARTITION BY wx.uwi2#(lf)            ORDER BY w2.spud_date DESC#(lf)        )                                        AS latest_rig_release_date,#(lf)        FIRST_VALUE(w2.spud_date) OVER (#(lf)            PARTITION BY wx.uwi2#(lf)            ORDER BY w2.spud_date DESC#(lf)        )                                        AS latest_spud_date#(lf)    FROM PPDM38.well_xref wx#(lf)    JOIN PPDM38.well w2 ON w2.uwi = wx.uwi#(lf)    WHERE wx.xref_type = 'WELL_ORIGIN'#(lf)    AND w2.spud_date IS NOT NULL#(lf)    AND w2.spud_date > DATE '1900-01-01'#(lf)) ls ON w.UWI = ls.parent_uwi#(lf)#(lf)#(lf)/*=========================================================================#(lf)    MASTER DATA JOINS#(lf)=========================================================================*/#(lf)#(lf)JOIN WELL_COMPONENT wc    ON w.uwi = wc.uwi#(lf)JOIN BUSINESS_ASSOCIATE b ON b.BUSINESS_ASSOCIATE = w.OPERATOR#(lf)JOIN BUSINESS_ASSOCIATE c ON c.BUSINESS_ASSOCIATE = w.CO_CURRENT_OPERATOR#(lf)#(lf)#(lf)/*=========================================================================#(lf)    BUSINESS UNIT ORGANISATION#(lf)=========================================================================*/#(lf)#(lf)/*#(lf)Root cause#(lf)----------#(lf)BA_ORGANIZATION contains two definitions for ORGANIZATION_ID = 'BU01':#(lf)#(lf)1. BUSINESS_ASSOCIATE = 'COMPANY'        — manually maintained master record.#(lf)2. BUSINESS_ASSOCIATE = 'COMPANY_LEGACY' — legacy record from a historical bulk load.#(lf)#(lf)Both records have the same ORGANIZATION_ID and ORGANIZATION_TYPE. The original#(lf)join could not distinguish between them, so each well matched twice and the#(lf)entire report was duplicated.#(lf)#(lf)Fix#(lf)---#(lf)Restrict the join to BUSINESS_ASSOCIATE = 'COMPANY' so that only the intended#(lf)record is retained and the legacy record is excluded.#(lf)*/#(lf)JOIN ba_organization o    ON wc.BA_ORGANIZATION_ID = o.ORGANIZATION_ID#(lf)                          AND o.BUSINESS_ASSOCIATE = 'COMPANY'#(lf)#(lf)#(lf)/*=========================================================================#(lf)    FILTERS#(lf)=========================================================================*/#(lf)#(lf)WHERE#(lf)    -- Include both onshore and offshore wells.#(lf)    w.ENVIRONMENT_TYPE IN ('ONSHORE', 'OFFSHORE')#(lf)#(lf)    -- Restrict well components and organisations to the in-scope business units.#(lf)    AND wc.WELL_COMPONENT_TYPE = 'BUSINESS_UNIT'#(lf)    AND o.ORGANIZATION_TYPE = 'BUSINESS_UNIT'#(lf)    AND o.ORGANIZATION_ID IN ('BU01','BU02')#(lf)#(lf)    -- Exclude Straddle and Disposal wells.#(lf)    AND w.CURRENT_STATUS NOT IN ('STR', 'DOP')#(lf)#(lf)    -- Include wells spudded after 1 January 2020.#(lf)    AND w.spud_date > DATE '2020-01-01'#(lf)#(lf)    -- Exclude child sidetrack / deepen wells so only top-level parent wells remain.#(lf)    AND w.UWI NOT IN (#(lf)        SELECT uwi#(lf)        FROM PPDM38.well_xref#(lf)        WHERE xref_type = 'WELL_ORIGIN'#(lf)    )"])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,37 @@
+table 'Quarter Bridge'
+	lineageTag: 9ae8e6b7-f148-40d2-8b2f-3f9fd636b0fb
+
+	column 'WELL NAME'
+		dataType: string
+		lineageTag: 30c10d4d-9f92-46a2-a11c-8da35aa92019
+		summarizeBy: none
+		sourceColumn: WELL NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Well Report Quarter'
+		dataType: string
+		lineageTag: 8201a8c4-0783-4240-b13a-7fe7bbe7c709
+		summarizeBy: none
+		sourceColumn: Well Report Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Quarter Bridge' = m
+		mode: import
+		source =
+				let
+				    Source = #"PPDM Extraction",
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"WELL NAME", "Child Rig Release Quarter Label", "Child Spud Quarter", "Rig Release Quarter", "Spud Quarter Label"}),
+				    #"Unpivoted Columns" = Table.UnpivotOtherColumns(#"Removed Other Columns", {"WELL NAME"}, "Attribute", "Value"),
+				    #"Filtered Rows" = Table.SelectRows(#"Unpivoted Columns", each [Value] <> null and [Value] <> ""),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"Attribute"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Columns"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Duplicates",{{"Value", "Well Report Quarter"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
